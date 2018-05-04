@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faqs id="FAQ" title="Frequently Asked Questions">
+  <part id="General">
+    <faq id="question">
+      <question>I have a question not answered here?</question>
+      <answer>
+        <p>
+          Double check the website. Search with google. Try different words.
+        </p>
+        
+        <p>
+          Contact the author with a well-written email, 
+          <a href="mailto:buchner.johannes@gmx.at?subject=[MavenJython]">Johannes Buchner</a>.
+          Offer chocolate.
+        </p>
+      </answer>
+    </faq>
+  </part>
+</faqs>

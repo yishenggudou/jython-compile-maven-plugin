@@ -1,0 +1,89 @@
+ ------
+ Usage
+ ------
+
+About ${project.name}
+
+  This plugin will allow you to integrate a modern jython installation to your project, 
+  to 
+  
+     * allow the user to use a python shell.
+     
+     * give you the possibility to program in python (with access to java)
+     
+     * use python libraries
+
+Usage
+  
+   # In your project, add a Jython dependency.
+  
+-----------------
+  		<dependency>
+			<groupId>org.python</groupId>
+			<artifactId>jython-standalone</artifactId>
+			<version>your-jython-version-here</version>
+		</dependency>
+-----------------
+  
+   # Add this Mojo as a packaging plugin
+    
+-----------------------------
+  	<build>
+  		...
+		<plugins>
+			...
+			<plugin>
+				<groupId>net.sf.mavenjython</groupId>
+				<artifactId>maven-jython-compile-plugin</artifactId>
+				<version>your-plugin-version-here</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>jython</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<libraries>
+						<param>nose</param>
+					</libraries>
+				</configuration>
+			</plugin>
+			...
+  		</plugins>
+  	</build>
+---------------------------------
+  	
+  	The <configuration> part is optional, but allows you to add 
+  	libraries to your jython installation.
+  
+    # Write code to call Jython, and write Python code 
+  
+    Best practice is to put your python modules into 
+    src/main/resources/Lib (or src/main/scripts/Lib and configure maven to copy correctly).
+  
+    Write a Jython initialization class to call the python interpreter or to make a 
+    python console. Look at the 
+    {{{http://mavenjython.sourceforge.net/compile/demo/}demo project}} for inspiration. 
+
+What does this plugin do?
+
+  It performs the following steps:
+  
+    * Finds Jython and extracts it to a build directory
+    
+    * Installs easy_install (setuptools) into the build directory
+    
+    * Runs easy_install with the libraries as arguments, to install each 
+      of the requested libraries
+    
+    * Copies the installed libraries to Lib/ in the output directory
+
+What does it mean?
+
+  Maven will package jython with the jar once you use jar-with-dependencies.
+  Jython will find the libraries in Lib/. Jython will find your code (if you put it in Lib/).
+  You can package Jython as an embedded scripting environment and deploy 3rd-party 
+  and your own libraries in a standalone jar. 
+  

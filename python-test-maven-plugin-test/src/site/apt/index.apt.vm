@@ -1,0 +1,62 @@
+ ------
+ About ${project.name}
+ ------
+
+${project.name}
+
+  Demonstrates the use of python tests using {{{http://code.google.com/p/python-nose/}nose}}, behavior tests using {{{https://github.com/rlisagor/freshen}freshen}} (a {{{http://cukes.info/}cucumber}} clone), and plain java junit tests.
+  
+  This project demonstrates the 
+  {{{http://mavenjython.sourceforge.net/test/}Maven-Jython test plugin}}.
+  
+Walkthrough
+
+  To see or get the code, look at the {{{source-repository.html}source repository}}.
+ 
+*Aims of this demo project
+
+  The codebase of the project, including the python code, should be tested for faults.
+  For this, additionally to junit (normal surefire), nosetests is run against the 
+  python scripts.
+ 
+*Configuration
+ 
+  In the pom, the plugin is referenced as a build plugin, in the test:python phase:goal.
+  
+  We declare nose as the tool to use. This can be seen in the configuration-section of the 
+  {{{http://mavenjython.sourceforge.net/compile/}maven-jython-compile-plugin}}.
+  
+  You can use another name here and it will be executed. Putting in "nose" here,
+  or not configuring this part (the default is nose), makes the plugin look for
+  "nosetests.bat". 
+  
+  On unix, provide a shell script (or softlink) named as such 
+  in the PATH. 
+  
+  On windows, make sure the jython\bin folder is in the PATH environment variable.
+
+*Code
+ 
+  In the src/test folder, you will see 
+  
+    *  a JUnit test, 
+    
+    *  a python tests collection,
+    
+    *  a .feature file, which is used to describe the behaviour, and a 
+       steps.py file that defines the language used in the features.
+   
+* Try it out
+
+  Any run that includes the test phase will trigger the plugin.
+  
+  run 
+
+---------------
+  mvn test
+---------------
+
+  which should show you that the executable is run and the tests are being 
+  performed, as well as the test results.
+  
+

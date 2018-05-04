@@ -1,0 +1,46 @@
+ ------
+ Introduction
+ ------
+ Johannes Buchner
+ ------
+ 2011-08-09
+ ------
+
+${project.name}
+
+  ${project.description}
+  
+  This plugin will allow you to test code in your project using an external tool.
+  
+  Specifically, it enables you to use nose tests, allowing you to
+  
+     - verify the correctness of python code
+     
+     - verify the behaviour of your application with a BDD test framework (lettuce, freshen).
+
+* Goals Overview
+
+  General information about the goals.
+
+  * {{{python-test-mojo.html}}} adding jython libraries to the project
+
+* Usage
+
+  General instructions on how to use the Python Test plugin can be found 
+  on the {{{usage.html}usage page}}. 
+  Some more specific use cases are described in the examples.
+
+  In case you still have questions regarding the plugin's usage, 
+  please have a look at the {{{faq.html}FAQ}}.
+
+  Contributors can check out the project from our 
+  {{{source-repository.html}source repository}}. 
+
+* Examples
+
+  To provide you with better understanding of some usages of the Python Test plugin,
+  you can take a look at the following example:
+
+  * {{{http://mavenjython.sourceforge.net/test/demo/}Example Jython Project}}
+
+ 

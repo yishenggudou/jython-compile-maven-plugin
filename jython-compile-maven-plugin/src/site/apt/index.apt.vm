@@ -1,0 +1,48 @@
+ ------
+ Introduction
+ ------
+ Johannes Buchner
+ ------
+ 2011-08-09
+ ------
+
+${project.name}
+
+  ${project.description}
+  
+  This plugin will allow you to integrate a modern jython installation to your project, 
+  to 
+  
+     * allow the user to use a python shell.
+     
+     * give you the possibility to program in python (with access to java)
+     
+     * use python libraries
+  
+
+* Goals Overview
+
+  General information about the goals.
+
+  * {{{jython-mojo.html}}} adding jython libraries to the project
+
+* Usage
+
+  General instructions on how to use the Jython Compile plugin can be found 
+  on the {{{usage.html}usage page}}. 
+  Some more specific use cases are described in the examples.
+
+  In case you still have questions regarding the plugin's usage, 
+  please have a look at the {{{faq.html}FAQ}}.
+
+  Contributors can check out the project from our 
+  {{{source-repository.html}source repository}}. 
+
+* Examples
+
+  To provide you with better understanding of some usages of the Jython Compile plugin,
+  you can take a look at the following example:
+
+  * {{{http://mavenjython.sourceforge.net/compile/demo/}Example Jython Project}}
+
+ 

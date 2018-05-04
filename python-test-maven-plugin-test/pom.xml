@@ -1,0 +1,116 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>net.sf.mavenjython.test</groupId>
+	<artifactId>python-test-maven-plugin-test</artifactId>
+	<version>1.0</version>
+	<name>Demo project for Python tests Maven Mojo</name>
+
+	<description>
+		Demonstrates the use of python tests using nose, behavior tests using freshen (a cucumber clone), and plain java junit tests.
+	</description>
+	<licenses>
+		<license>
+			<name>GPL 3</name>
+			<url>http://www.gnu.org/licenses/gpl-3.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+		<license>
+			<name>GPL 2</name>
+			<url>http://www.gnu.org/licenses/gpl-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+		<license>
+			<name>Apache Public License</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<id>johannes</id>
+			<name>Johannes Buchner</name>
+			<email>buchner.johannes@gmx.at</email>
+		</developer>
+	</developers>
+	<url>http://mavenjython.sourceforge.net/test/demo/</url>
+	<distributionManagement>
+		<site>
+			<id>sourceforge</id>
+			<url>scp://shell.sourceforge.net/home/project-web/mavenjython/htdocs/test/demo/</url>
+		</site>
+		<repository>
+			<id>sourceforge</id>
+			<name>SourceForge</name>
+			<url>sftp://frs.sourceforge.net:/home/frs/project/m/ma/mavenjython/maven/releases/</url>
+		</repository>
+	</distributionManagement>
+	<scm>
+		<connection>scm:git:git://git.code.sf.net/p/mavenjython/code</connection>
+		<developerConnection>scm:git:ssh://johannesbuchner@git.code.sf.net/p/mavenjython/code</developerConnection>
+		<url>https://sourceforge.net/p/mavenjython/code/</url>
+	</scm>
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+			<resource>
+				<directory>src/main/scripts</directory>
+			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory>src/test/resources</directory>
+			</testResource>
+			<testResource>
+				<directory>src/test/scripts</directory>
+			</testResource>
+		</testResources>
+		<plugins>
+			<plugin>
+				<groupId>net.sf.mavenjython.test</groupId>
+				<artifactId>python-test-maven-plugin-external</artifactId>
+				<version>1.0</version>
+				<executions>
+					<execution>
+						<phase>test</phase>
+						<goals>
+							<goal>python</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+		</dependency>
+	</dependencies>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+</project>

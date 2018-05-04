@@ -1,0 +1,55 @@
+ ------
+ Usage
+ ------
+
+About ${project.name}
+
+  This plugin will allow you to test code in your project using an external tool.
+
+Usage
+  
+  # Install the external tool you want to use locally. This means: Install jython, 
+     easy_install, and nose.
+     Make sure a file called "nosetests.bat" is in your path and calls nose.
+     This also allows further customization (arguments, etc.)
+  
+  # Add the python-test plugin to your build in the test phase:
+  
+-----------------
+	<build>
+		....
+		<plugins>
+			...
+			<plugin>
+				<groupId>net.sf.mavenjython.test</groupId>
+				<artifactId>maven-python-test-plugin-external</artifactId>
+				<version>plugin-version-here</version>
+				<executions>
+					<execution>
+						<phase>test</phase>
+						<goals>
+							<goal>python</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			...
+		</plugins>
+		...
+	</build>
+-----------------
+  
+  # Write test code that nose will find
+  
+Using other external tools
+
+  Although the default tool to use is nose, this is easy to change. 
+  
+  Configure jython-test.program to the desired functionality.
+   
+  A word of caution: The maven philosophy is to describe what to do, not how to do it.
+  Using an external tool can cause some issues -- don't make it platform specific.
+  
+  The program is launched in the test output directory. The JYTHONPATH variable 
+  holds the test output directory and the main output directory. 
+
