@@ -1,7 +1,7 @@
 
 print "Python started."
 
-from com.github.yishenggudou.mavenjython.test import FibSequenceCalc
+from com.github.yishenggudou.test import FibSequenceCalc
 
 import nose
 

@@ -64,7 +64,7 @@ public class JythonMojo extends AbstractMojo {
     private List<String> libraries;
 
 
-    private String mirror;
+    private String mirror = "http://mirrors.aliyun.com/pypi/simple";
 
     /**
      * Caching directory to download and build python packages, as well as

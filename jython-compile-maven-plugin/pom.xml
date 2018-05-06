@@ -2,10 +2,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.yishenggudou</groupId>
-    <artifactId>com.github.yishenggudou.test</artifactId>
+    <artifactId>jython-compile-maven-plugin</artifactId>
     <packaging>maven-plugin</packaging>
-    <version>0.0.3</version>
-    <name>Maven Jython packaging</name>
+    <version>0.0.6</version>
+    <name>jython-compile-maven-plugin</name>
     <description>
         Allows your project to integrate jython/python
         scripting including python libraries

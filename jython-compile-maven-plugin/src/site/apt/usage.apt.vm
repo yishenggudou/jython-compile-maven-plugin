@@ -33,7 +33,7 @@ Usage
 		<plugins>
 			...
 			<plugin>
-				<groupId>com.github.yishenggudou.mavenjython</groupId>
+				<groupId>com.github.yishenggudou</groupId>
 				<artifactId>maven-jython-compile-plugin</artifactId>
 				<version>your-plugin-version-here</version>
 				<executions>
