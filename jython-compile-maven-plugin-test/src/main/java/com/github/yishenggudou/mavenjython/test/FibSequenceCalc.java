@@ -1,4 +1,4 @@
-package com.github.yishenggudou.test;
+package com.github.yishenggudou.mavenjython.test;
 
 import java.util.Iterator;
 
