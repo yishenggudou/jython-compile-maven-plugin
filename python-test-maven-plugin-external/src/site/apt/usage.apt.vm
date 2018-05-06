@@ -21,7 +21,7 @@ Usage
 		<plugins>
 			...
 			<plugin>
-				<groupId>net.sf.mavenjython.test</groupId>
+				<groupId>com.github.yishenggudou.mavenjython.test</groupId>
 				<artifactId>maven-python-test-plugin-external</artifactId>
 				<version>plugin-version-here</version>
 				<executions>

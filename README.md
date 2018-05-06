@@ -9,3 +9,8 @@
   <version>0.0.2</version>
 </dependency>
 ```
+
+
+## note
+
+因为要发仓库,我改了groupId
