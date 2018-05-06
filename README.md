@@ -6,7 +6,7 @@
 <dependency>
   <groupId>com.github.yishenggudou</groupId>
   <artifactId>jython-compile-maven-plugin</artifactId>
-  <version>0.0.2</version>
+  <version>0.0.6</version>
 </dependency>
 ```
 
