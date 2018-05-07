@@ -1,6 +1,6 @@
 # jython-compile-maven-plugin
 
-修复国内安装官方源访问不对问题,使用镜像源改为阿里云`http://mirrors.aliyun.com/pypi/simple`
+修复国内安装官方源访问不对问题(速度, https各种问题),使用镜像源改为阿里云`http://mirrors.aliyun.com/pypi/simple`
 
 ```
 <dependency>
