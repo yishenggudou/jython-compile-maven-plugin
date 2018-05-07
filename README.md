@@ -10,6 +10,31 @@
 </dependency>
 ```
 
+## 用法
+
+在configuration里面加了一个 `mirror` 属性
+
+```
+<plugin>
+                <groupId>com.github.yishenggudou</groupId>
+                <artifactId>jython-compile-maven-plugin</artifactId>
+                <version>0.0.6</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jython</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mirror>http://mirrors.aliyun.com/pypi/simple</mirror>
+                    <libraries>
+                        <param>sqlalchemy</param>
+                    </libraries>
+                </configuration>
+            </plugin>
+```
 
 ## note
 
