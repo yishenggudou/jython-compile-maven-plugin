@@ -1,5 +1,7 @@
 # jython-compile-maven-plugin
 
+![](https://maven-badges.herokuapp.com/maven-central/com.github.yishenggudou/mavenjython/badge.svg)
+
 修复国内安装官方源访问不对问题(速度, https各种问题),使用镜像源改为阿里云`http://mirrors.aliyun.com/pypi/simple`
 
 ```
@@ -41,3 +43,5 @@
 ## note
 
 因为要发仓库,我改了groupId
+
+https://mvnrepository.com/artifact/com.github.yishenggudou/mavenjython
